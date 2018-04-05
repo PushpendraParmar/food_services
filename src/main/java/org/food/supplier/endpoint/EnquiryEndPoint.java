@@ -14,9 +14,9 @@ public interface EnquiryEndPoint {
 	@RequestMapping(value="{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON)
 	public EnquiryView getEnquiryDetails(Long id);
 	
-	@RequestMapping(value="save", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON)
+	@RequestMapping(value="save", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON)
 	public Boolean saveEnquiry( EnquiryView enquiryView);
 	
-	@RequestMapping(value="products", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON)
+	@RequestMapping(value="getEnquiries", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON)
 	public List<EnquiryView> getAllEnquiry();
 }
